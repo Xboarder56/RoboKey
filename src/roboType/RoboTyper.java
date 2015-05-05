@@ -5,7 +5,6 @@
 package roboType;
 import java.awt.AWTException;
 import java.awt.Robot;
-import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Random;
@@ -62,23 +61,22 @@ public class RoboTyper
         keys.add(KeyEvent.VK_SPACE);
         keys.add(KeyEvent.VK_BACK_SPACE);
         
-        
         while(roboRun)
         {
 		   	try 
 			{
 		   	
+		   	/*Creates a new robot object*/
 		    Robot robot = new Robot();
-		    int delay = random.nextInt(10000)+5500;
+		    /*Sets the delay of the program*/
+		    int delay = random.nextInt(10000)+4000;
+		    /*Sleeps the thread to cause the delay*/
 		    Thread.sleep(delay);
-		    
-		    robot.mousePress(InputEvent.BUTTON1_MASK);
-		    robot.mouseRelease(InputEvent.BUTTON1_MASK);
 		
+		    /*Choose a random key from the arraylist and press it up and release*/
 		    int randomKey = random.nextInt(keys.size());
 		    robot.keyPress((int) keys.get(randomKey));
 		    robot.keyRelease((int) keys.get(randomKey));
-		    
 		    
 			}
 			catch (AWTException | InterruptedException e) 
