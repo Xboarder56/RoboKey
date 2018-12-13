@@ -1,5 +1,5 @@
 /**
- * @author sn0w
+ * @author xboarder56
  */
 
 package roboType;
@@ -20,7 +20,7 @@ public class RoboTyper
         Random random = new Random();
         
         @SuppressWarnings("rawtypes")
-		ArrayList keys = new ArrayList();
+	ArrayList keys = new ArrayList();
         keys.add(KeyEvent.VK_0);
         keys.add(KeyEvent.VK_1);
         keys.add(KeyEvent.VK_2);
@@ -66,10 +66,10 @@ public class RoboTyper
 		   	try 
 			{
 		   	
-		   	/*Creates a new robot object*/
+		    /*Creates a new robot object*/
 		    Robot robot = new Robot();
-		    /*Sets the delay of the program*/
-		    int delay = random.nextInt(10000)+4000;
+		    /*Sets the delay of the program (Milliseconds)*/
+		    int delay = random.nextInt(120000)+30000;
 		    /*Sleeps the thread to cause the delay*/
 		    Thread.sleep(delay);
 		
